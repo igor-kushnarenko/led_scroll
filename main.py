@@ -13,7 +13,15 @@ def get_weather():
     weather = observation.weather
     temp = weather.temperature('celsius')['temp']
     detailed = weather.clouds
-    return f'Погода на сегодня: {str(round(temp))} C, облачность: {detailed}% '
+    welcome_message = 'Добрый день! Добро пожаловать в Alean Family Resort & Spa Doville! Сегодня 20 мая, четверг. '
+    weather_message = f'Погода на сегодня: +{str(round(temp))} C, облачность: {detailed}%'
+    schedule_message = '16:00 - Водное поло в бассейне №4 18+, ' \
+                       '17:00 - Семейные интерактивные игры 8+, ' \
+                       '18:00 - Радио "Довиль" 0+, ' \
+                       '19:45 - Награждение на главной сцене, ' \
+                       '20:00 - Детская вечерняя программа 8+, ' \
+                       '21:00 - Взрослая вечерняя развлекательная программа 18+. '
+    return f'| {welcome_message}  |  {weather_message}  |  {schedule_message} | '
 
 
 eel.init('web')
