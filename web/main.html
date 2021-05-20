@@ -11,9 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap">
 
         <script type="text/javascript">
-        //Тут пишем JS-код для вызова Python-функций
         async function display_weather(){
-            //Вызываем функцию get_weather из python-кода
             let result = await eel.get_weather()();
             document.getElementById('info').innerHTML = result;
         }
@@ -22,7 +20,6 @@
 </head>
 
 <body>
-
     <div class="marquee"><span><div id="info"></div></span></div>
 </body>
 
