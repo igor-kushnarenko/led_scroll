@@ -19,7 +19,17 @@ def get_weather():
                        '17:00 - Семейные интерактивные игры 8+, ' \
                        '20:00 - Детская вечерняя программа 8+, ' \
                        '21:00 - Взрослая вечерняя развлекательная программа 18+. '
-    return f'{welcome_message} | {weather_message} | {schedule_message}'
+    return f' {schedule_message}'
+
+
+@eel.expose
+def say_welcome():
+    schedule_message = '16:00 - Водное поло в бассейне №4 18+, ' \
+                       '17:00 - Семейные интерактивные игры 8+, ' \
+                       '20:00 - Детская вечерняя программа 8+, ' \
+                       '21:00 - Взрослая вечерняя развлекательная программа 18+. '
+    welcome_message = 'Добрый день! Добро пожаловать в Alean Family Resort & Spa Doville! Сегодня 20 мая, четверг. '
+    return schedule_message, welcome_message
 
 
 eel.init('web')

@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap">
 
         <script type="text/javascript">
-        async function display_weather(){
-            let result = await eel.get_weather()();
-            document.getElementById('info').innerHTML = result;
+        async function display_func(){
+            let welcome = await eel.say_welcome()();
+            document.getElementById('info').innerHTML = welcome;
         }
-        display_weather();
+        display_func();
     </script>
 </head>
 
