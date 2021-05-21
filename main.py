@@ -19,7 +19,7 @@ def get_weather():
                        '17:00 - Семейные интерактивные игры 8+, ' \
                        '20:00 - Детская вечерняя программа 8+, ' \
                        '21:00 - Взрослая вечерняя развлекательная программа 18+. '
-    return welcome_message
+    return f'{welcome_message} | {weather_message} | {schedule_message}'
 
 
 eel.init('web')
