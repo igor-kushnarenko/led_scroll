@@ -14,16 +14,17 @@ def say_welcome():
     temp = weather.temperature('celsius')['temp']
     detailed = weather.clouds
     weather_message = f'Погода на сегодня: +{str(round(temp))} C, облачность: {detailed}%'
-    welcome_message = 'Добрый день! Добро пожаловать в Alean Family Resort & Spa Doville! Сегодня 20 мая, четверг. '
+    welcome_message = 'Добрый день! Добро пожаловать в Alean Family Resort & Spa Doville! Сегодня 21 мая, пятница. '
     return f'{welcome_message} | {weather_message}'
 
 
 @eel.expose
 def say_schedule():
-    schedule_message = '16:00 - Водное поло в бассейне №4 (18+), ' \
-                       '17:00 - Семейные интерактивные игры (8+), ' \
-                       '20:00 - Детская вечерняя программа (8+), ' \
-                       '21:00 - Взрослая вечерняя развлекательная программа (18+). ' \
+    schedule_message = 'РАСПИСАНИЕ: 15:00 - Радио "Довиль" | ' \
+                       '16:00 - Водное поло в бассейне №4 (18+) | ' \
+                       '17:00 - Семейные интерактивные игры (8+) | ' \
+                       '20:00 - Детская вечерняя программа (8+) | ' \
+                       '20:30 - Шоу талантов | ' \
                        'Более подробно с расписанием анимационных мероприятий, вы можете ознакомиться на ' \
                        'информационном стенде при входе в ресторан Нормандия.'
     return schedule_message
