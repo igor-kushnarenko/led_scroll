@@ -13,14 +13,17 @@
         <script type="text/javascript">
         async function display_func(){
             let welcome = await eel.say_welcome()();
-            document.getElementById('info').innerHTML = welcome;
+            let schedule = await eel.say_schedule()();
+            document.getElementById('welcome').innerHTML = welcome;
+            document.getElementById('schedule').innerHTML = schedule;
         }
         display_func();
     </script>
 </head>
 
 <body>
-    <div class="marquee"><span><div id="info"></div></span></div>
+    <div class="marquee"><span><div id="welcome"></div></span></div>
+    <div class="marquee"><span><div id="schedule"></div></span></div>
 
 </body>
 
