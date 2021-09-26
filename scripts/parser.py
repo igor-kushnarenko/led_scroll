@@ -1,7 +1,7 @@
 import locale
 from datetime import datetime
 
-locale.setlocale(locale.LC_ALL, "ru")
+locale.setlocale(locale.LC_ALL, ('ru_RU', 'UTF-8'))
 
 monthes = {
     1: 'января',
@@ -25,7 +25,7 @@ even_week = {
     'четверг': ('Монстры на каникулах', 'Балканы'),
     'пятница': ('Минидиско', 'Созвездие талантов'),
     'суббота': ('Фердинанд', 'Испания'),
-    'воскресение': ('Королева пиратов', 'Бродвей'),
+    'воскресенье': ('Королева пиратов', 'Бродвей'),
 
 }
 odd_week = {
@@ -35,20 +35,20 @@ odd_week = {
     'четверг': ('Монстры на каникулах', 'Балканы'),
     'пятница': ('Минидиско', 'Созвездие талантов'),
     'суббота': ('Фердинанд', 'Испания'),
-    'воскресение': ('Королева пиратов', 'Бродвей'),
+    'воскресенье': ('Королева пиратов', 'Бродвей'),
 
 }
 
 
 def get_weekday_date():
     today = datetime.today()
-    str_today = datetime.today().strftime('%A, %d')
+    str_today = datetime.today().strftime('%A, %d').lower()
     return f'Сегодня {str_today} {monthes[today.month]}'
 
 
 def get_show():
     today = datetime.today()
-    weekday = today.strftime('%A')
+    weekday = today.strftime('%A').lower()
     number_week = today.isocalendar()[1]
     if number_week % 2 == 0:
         return even_week[weekday]
